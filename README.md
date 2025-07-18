@@ -16,7 +16,7 @@ _(Downloading and Installing Git)_
 
 `git config --list` _(To check your default Git global configuration)_
 
-`git config credential.username username1` _(To switch git user)
+`git config credential.username username1` _(To switch git user)_
 ***
 
 ## Git operations on your local Git repository:
