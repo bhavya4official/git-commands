@@ -1,1 +1,4 @@
-node_modules
+#comment
+credentials.txt
+node_modules/
+*.log
