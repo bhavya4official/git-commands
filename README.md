@@ -38,6 +38,8 @@ _(Downloading and Installing Git)_
 
 `git commit -a -m "Commit message"` _(Automatically stage files that have been modified and deleted - excluding new files)_
 
+`git commit --amend` _(Redo the previous commit - In case of typo in previous commit message or to include file changes missed in previous commit)_
+
 `git branch -M main` 
 
 `git log`
