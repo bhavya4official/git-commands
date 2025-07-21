@@ -93,6 +93,16 @@ _(Downloading and Installing Git)_
 `git checkout -- index.html` _(Commit to the latest version)_
 ***
 
+## Ignoring files/directories to get tracked by Git
+> Create a file called .gitignore in the root of a repository. Write patterns to tell Git which files & folders to ignore.
+
+`.fileName` _(Ignore a specific file)_
+
+`folderName/` _(Ignore entire folder/directory)_
+
+`*.log` _(Ignore any file with the .log extension)_
+***
+
 ## Error Fix: "main and master are entirely different commit histories"
 ```
 git checkout master   
