@@ -98,7 +98,7 @@ _(Downloading and Installing Git)_
 ## Ignoring files/directories to get tracked by Git
 > Create a file called .gitignore in the root of a repository. Write patterns to tell Git which files & folders to ignore.
 
-`.fileName` _(Ignore a specific file)_
+`fileName` _(Ignore a specific file)_
 
 `folderName/` _(Ignore entire folder/directory)_
 
