@@ -10,11 +10,13 @@ _(Downloading and Installing Git)_
 
 `git --version` _(Check to make sure that Git is installed and available on the command line)_
 
+`git config --list` _(To check your default Git global configuration)_
+
 `git config --global user.name "Your_User_Name"` _(To configure your user name to be used by Git)_
 
 `git config --global user.email <your email address>` _(To configure your email to be used by Git)_
 
-`git config --list` _(To check your default Git global configuration)_
+`git config --global core.editor "code --wait"` _(To configure default editor for commit message as VS Code)_
 
 `git config credential.username username1` _(To switch git user)_
 ***
@@ -38,8 +40,8 @@ _(Downloading and Installing Git)_
 
 `git branch -M main` 
 
-`git log --oneline`
-`git log` _(To check the log of the commits to your Git repository)_
+`git log`
+`git log --oneline` _(To check the log of the commits to your Git repository)_
 ***
 
 ## Make a clone of git repository to the local repository:
