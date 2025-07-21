@@ -66,6 +66,8 @@ _(Downloading and Installing Git)_
 `git remote -v` _(See the current configured remote repository for your fork)_
 `git remote set-url origin <repo URL>`
 `git remote remove origin` _(To remove remote)_
+
+>Note: “origin” represents the default remote repository, typically the one you cloned from, while “upstream” refers to an additional remote repository that you may want to track or contribute changes to.
 ***
 
 ## Switch branches or restore working tree files:
@@ -111,4 +113,3 @@ git checkout main
 git push origin main -f 
 ```
 ***
->Note: “origin” represents the default remote repository, typically the one you cloned from, while “upstream” refers to an additional remote repository that you may want to track or contribute changes to.
