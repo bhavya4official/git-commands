@@ -40,8 +40,6 @@ _(Downloading and Installing Git)_
 
 `git commit --amend` _(Redo the previous commit - In case of typo in previous commit message or to include file changes missed in previous commit)_
 
-`git branch -M main` 
-
 `git log`
 `git log --oneline` _(To check the log of the commits to your Git repository)_
 ***
@@ -70,8 +68,16 @@ _(Downloading and Installing Git)_
 >Note: “origin” represents the default remote repository, typically the one you cloned from, while “upstream” refers to an additional remote repository that you may want to track or contribute changes to.
 ***
 
-## Switch branches or restore working tree files:
+## Working with branches:
 `git branch` `git branch -r` _(To check all & working branch)_
+
+`git branch -M main` _(Rename your current local Git branch to 'main')_
+
+`git push origin <branch-name>` _(To push new branch to a remote repository)_
+
+`git push -u origin main` _(Push the new main branch to your remote repository and track it)_
+
+`git push origin --delete master` _(Delete the old master branch from the remote repository)_
 
 `git branch <new-branch>` _(Create a new branch based on the current HEAD)_
 
@@ -80,8 +86,6 @@ _(Downloading and Installing Git)_
 `git branch <new-branch> <base-branch>` _(create a new branch based on some existing one)_
 
 `git checkout <branch-name>` _(To switch working branch)_
-
-`git push origin <branch-name>` _(To push new branch to a remote repository)_
 
 `git branch --set-upstream-to=origin/main <branch-name>` `git branch -u origin/main <branch-name>` _(<branch-name> will be set up to track 'origin/main' | set tracking information for this branch)_
 
