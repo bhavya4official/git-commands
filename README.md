@@ -3,10 +3,10 @@
 ## Setting up Git:
 _(Downloading and Installing Git)_
 
->go to https://git-scm.com/downloads to download the Git installer for your specific computing platform and follow the installation steps.
+> Go to https://git-scm.com/downloads to download the Git installer for your specific computing platform and follow the installation steps.
 
 ## Global Configuration for Git:
->Open a cmd window or terminal on your computer.
+> Open a CMD window or terminal on your computer.
 
 `git --version` _(Check to make sure that Git is installed and available on the command line)_
 
@@ -22,7 +22,7 @@ _(Downloading and Installing Git)_
 ***
 
 ## Git operations on your local Git repository:
->On your computer create a folder. Open this folder in any text editor and Create any file with some content.
+> On your computer, create a folder. Open this folder in any text editor and create any file with some content.
 
 `echo "# Project Description" >> README.md` _(To create a Readme file)_
 
@@ -53,11 +53,17 @@ _(Downloading and Installing Git)_
 
 `git pull <remote> <branch-name>` `git pull origin master` _(pulls the master branch from the remote called origin into your current branch)_
 
-`git pull` _(git fetch+ git merge It fetch and download content from a remote repository and immediately update the local repository to match that content)_
+`git pull` _(git fetch + git merge -> It fetch and download content from a remote repository and immediately update the local repository to match that content)_
 
-`git push -u origin master` `git push --set-upstream origin master`
+`git push -u origin <remote-branch>` `git push --set-upstream origin master` _(Push the code and links your local branch to branch present on origin - Use it very first time you push a branch to a remote repository.)_
+
+`git push origin <remote-branch>` _(Pushes code but does not create or modify a tracking link - Use it for Routine pushes, or when pushing a branch you don't want to link permanently.)_
+
 `git push --all`
-`git push origin` _(Pushing your commits to the online repository)_
+`git push origin`
+`git push` _(Pushing your commits to the online repository)_
+
+`git push origin --delete <old-branch>` _(Delete the old branch from the remote repository)_
 
 `git push -f origin master` _(Force change - override the remote branch code with your local repo code)_
 
@@ -65,36 +71,42 @@ _(Downloading and Installing Git)_
 `git remote set-url origin <repo URL>`
 `git remote remove origin` _(To remove remote)_
 
->Note: “origin” represents the default remote repository, typically the one you cloned from, while “upstream” refers to an additional remote repository that you may want to track or contribute changes to.
+> Note: “origin” represents the default remote repository, typically the one you cloned from, while “upstream” refers to an additional remote repository that you may want to track or contribute changes to.
 ***
 
 ## Working with branches:
-`git branch` `git branch -r` _(To check all & working branch)_
+`git branch` _(List All Local branches)_
 
-`git branch -M main` _(Rename your current local Git branch to 'main')_
+`git branch -r` _(List All Remote Branches)_
 
-`git push origin <branch-name>` _(To push new branch to a remote repository)_
+`git branch -a` _(List All branches (local & remote))_
 
-`git push -u origin main` _(Push the new main branch to your remote repository and track it)_
+`git branch -M <new-name>` _(Rename your current local Git branch)_
 
-`git push origin --delete master` _(Delete the old master branch from the remote repository)_
+`git branch -m <old-name> <new-name>` _(Rename your local Git branch, If you are on a different branch)_
+> To rename a remote branch, you cannot directly rename it on the server. Instead, you must rename your local branch, delete the old branch on the remote, and then push the new branch up and set the upstream
 
 `git branch <new-branch>` _(Create a new branch based on the current HEAD)_
 
-`git checkout -b <new-branch-name>` _(To create and switch to a new branch)_
+`git checkout -b <new-branch>` `git switch -c <new-branch>` _(Create and switch to a new branch)_
 
-`git branch <new-branch> <base-branch>` _(create a new branch based on some existing one)_
+`git branch <new-branch> <base-branch>` _(Create a new branch based on some existing one)_
 
-`git checkout <branch-name>` _(To switch working branch)_
+`git checkout <branch-name>` `git switch <branch-name>` _(To switch working branch)_
+
+`git checkout -` `git switch -` _(Going Back to the Previous Branch)_
 
 `git branch --set-upstream-to=origin/main <branch-name>` `git branch -u origin/main <branch-name>` _(<branch-name> will be set up to track 'origin/main' | set tracking information for this branch)_
 
 `git checkout <commit's number first 7 digit> file_name`
-`git checkout <commit's number first 7 digit>` _(Checking out a file from an earlier commit)_
+`git checkout <commit's number first 7 digit>`
+`git switch --detach <commit's number first 7 digit>` _(Checking out a file from an earlier commit | Detaching HEAD (Inspecting an Old Commit))_
 
 `git reset HEAD file_name`
 `git reset` _(Resetting the Git repository)_
- >It reset the staging area to the last commit without disturbing the working directory
+> It reset the staging area to the last commit without disturbing the working directory
+
+`git checkout -- <file>` _(Discard File Changes)_
 
 `git checkout -- index.html` _(Commit to the latest version)_
 ***
