@@ -61,7 +61,7 @@ _(Downloading and Installing Git)_
 
 `git push --all`
 `git push origin`
-`git push` _(Pushing your commits to the online repository)_
+`git push` _(Pushing your commits to the online repository, once upstream branch is set - local branch is linked to the remote repository.)_
 
 `git push origin --delete <old-branch>` _(Delete the old branch from the remote repository)_
 
